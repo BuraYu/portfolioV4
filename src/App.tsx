@@ -11,7 +11,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
-      <div>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Header />
         <main>
           <Hero />
