@@ -1,6 +1,7 @@
 import React from "react";
 import { Panda, Fish, Bug } from "lucide-react";
 import Badge from "./Badge";
+import GradientDivider from "./GradientDivider";
 
 const About: React.FunctionComponent<{}> = () => {
   return (
@@ -13,7 +14,7 @@ const About: React.FunctionComponent<{}> = () => {
                 About Me
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto rounded-full"></div>
+            <GradientDivider />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
