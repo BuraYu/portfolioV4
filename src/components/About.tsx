@@ -1,7 +1,8 @@
 import React from "react";
 import { Panda, Fish, Bug } from "lucide-react";
 import Badge from "./Badge";
-import GradientDivider from "./GradientDivider";
+import GradientDivider from "./ui/GradientDivider";
+import GradientButton from "./ui/GradientButton";
 
 const About: React.FunctionComponent<{}> = () => {
   return (
@@ -45,13 +46,12 @@ const About: React.FunctionComponent<{}> = () => {
               </div>
 
               <div className="pt-8">
-                <button
+                <GradientButton
                   onClick={() =>
                     document
                       .getElementById("contact")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                 >
                   Let's Connect
                   <svg
@@ -67,7 +67,7 @@ const About: React.FunctionComponent<{}> = () => {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </button>
+                </GradientButton>
               </div>
             </div>
 

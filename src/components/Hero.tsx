@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
+import GradientButton from "./ui/GradientButton";
+import OutlineButton from "./ui/OutlineButton";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -88,22 +90,18 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-            <button
-              onClick={scrollToAbout}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-            >
-              Get to know me
-            </button>
-            <button
+            <GradientButton onClick={scrollToAbout}>
+              {" "}
+              Let's connect
+            </GradientButton>
+            <OutlineButton
+              label="View my work"
               onClick={() =>
                 document
                   .getElementById("projects")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-full font-semibold hover:bg-blue-600 hover:text-white dark:hover:text-white transition-all duration-300"
-            >
-              View my work
-            </button>
+            />
           </div>
 
           {/* Scroll */}
