@@ -63,7 +63,7 @@ const Projects: React.FunctionComponent<{}> = () => {
           </div>
 
           <div className="space-y-20">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <div
                 key={project.id}
                 className={`grid lg:grid-cols-2 gap-12 items-center ${
