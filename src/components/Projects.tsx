@@ -9,7 +9,7 @@ const Projects: React.FunctionComponent<{}> = () => {
       title: "Flokkr",
       description:
         "A web application built with Next.js and MongoDB that allows users to explore events, filter them by categories (such as Music, Sports, Technology, etc.), and view event details.",
-      image: "/public/flokkr.mp4",
+      image: "/flokkr.mp4",
       tech: [
         "React/NextJS",
         "JavaScript",
@@ -26,7 +26,7 @@ const Projects: React.FunctionComponent<{}> = () => {
       title: "Shalia",
       description:
         "A modern website for a packaging company, showcasing products, and contact information. Built with Next.js and styled using Tailwind CSS for a responsive and user-friendly experience.",
-      image: "/public/shalia.mp4",
+      image: "/shalia.mp4",
       tech: ["React/NextJS", "Tailwind CSS"],
       github: "https://github.com/BuraYu/shaila",
       live: "https://shaila-rho.vercel.app/",
@@ -37,7 +37,7 @@ const Projects: React.FunctionComponent<{}> = () => {
       title: "Bento",
       description:
         "A bento grid with a chat and terminal, to showcase project that have been done.",
-      image: "/public/BentoGrid.mp4",
+      image: "/BentoGrid.mp4",
       tech: ["NextJS", "MongoDB", "Framer Motion", "Slick"],
       github: "https://github.com/BuraYu/portfolioV3",
       live: "https://portfolio-v3-ten-alpha.vercel.app/",
