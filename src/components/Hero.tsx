@@ -3,10 +3,13 @@ import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import GradientButton from "./ui/GradientButton";
 import OutlineButton from "./ui/OutlineButton";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Frontend Developer";
+  const fullText = t("hero.title");
   const { isDarkMode } = useTheme();
 
   useEffect(() => {
@@ -58,7 +61,7 @@ const Hero = () => {
             </h2>
             {/* TODO add location */}
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-              add text here
+              {t("hero.text")}
             </p>
           </div>
 
@@ -90,15 +93,19 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-            <GradientButton onClick={scrollToAbout}>
-              {" "}
-              Let's connect
-            </GradientButton>
-            <OutlineButton
-              label="View my work"
+            <GradientButton
+              label={t("hero.button.work")}
               onClick={() =>
                 document
                   .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            />
+            <OutlineButton
+              label={t("hero.button.connect")}
+              onClick={() =>
+                document
+                  .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             />

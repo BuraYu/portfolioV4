@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Globe, Moon, Sun } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const Header: React.FunctionComponent<{}> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [language, setLanguage] = useState("DE");
+  const [language, setLanguage] = useState("EN");
   const { isDarkMode, toggleDarkMode } = useTheme();
+
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +27,19 @@ const Header: React.FunctionComponent<{}> = () => {
     }
   };
 
+  const changeLanguage = (language: string) => {
+    const newLanguage = language === "DE" ? "EN" : "DE";
+    i18n.changeLanguage(newLanguage.toLowerCase()).then(() => {
+      setLanguage(newLanguage);
+    });
+  };
+
   const navItems = [
-    { name: "Home", id: "hero" },
-    { name: "About", id: "about" },
-    { name: "Skills", id: "skills" },
-    { name: "Projects", id: "projects" },
-    { name: "Contact", id: "contact" },
+    { name: t("header.nav.home"), id: "hero" },
+    { name: t("header.nav.about"), id: "about" },
+    { name: t("header.nav.skills"), id: "skills" },
+    { name: t("header.nav.projects"), id: "projects" },
+    { name: t("header.nav.contact"), id: "contact" },
   ];
 
   return (
@@ -79,7 +89,7 @@ const Header: React.FunctionComponent<{}> = () => {
             {/* Language Selector */}
             <div className="relative">
               <button
-                onClick={() => setLanguage(language === "DE" ? "EN" : "DE")}
+                onClick={() => changeLanguage(language)}
                 className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
               >
                 <Globe size={18} />

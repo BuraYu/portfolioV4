@@ -1,0 +1,64 @@
+{
+  "header": {
+    "nav": {
+      "home": "Startseite",
+      "about": "Über mich",
+      "skills": "Skills",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    }
+  },
+  "hero": {
+    "title": "Fullstack-Entwickler",
+    "text": "Text",
+    "button": {
+      "connect": "Kontakt",
+      "work": "Ausgewählte Projekte"
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "par1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "par2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "par3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "badge1": "Programmieren",
+    "badge2": "Schwimmen",
+    "badge3": "Haustiere",
+    "connect": "Kontakt",
+    "mainTitle": "Titelbild",
+    "subTitle": "Untertitelbild"
+  },
+  "projects": {
+    "title": "Projekte",
+    "subTitle": "Hier könnt ihr einige meine Projekte sehen.",
+    "technology": "Technologien",
+    "projectOneDescription": "Eine Webanwendung mit Next.js und MongoDB, mit der Nutzer Events entdecken, nach Kategorien (z. B. Musik, Sport, Technologie) filtern und Eventdetails ansehen können.",
+    "projectTwoDescription": "Eine moderne Website für ein Verpackungsunternehmen zur Präsentation von Produkten und Kontaktinformationen. Erstellt mit Next.js und gestylt mit Tailwind CSS für ein responsives, benutzerfreundliches Erlebnis.",
+    "projectThreeDescription": "Ein Bento-Grid mit Chat und Terminal, um Projekte übersichtlich zu präsentieren.",
+    "viewMore": "Mehr auf GitHub ansehen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "mainParagraph": "Bereit für dein nächstes Projekt? Lass uns gemeinsam etwas Großartiges erschaffen!",
+    "subTitle": "Lass uns in Kontakt treten",
+    "subParagraph": "Ich bin immer offen für neue Möglichkeiten, kreative Projekte oder einfach ein Gespräch über Technologie und Design.",
+    "phone": "Telefon",
+    "response": "Antwortzeit",
+    "responseParagraph": "In der Regel antworte ich innerhalb von 24 Stunden. Bei dringenden Anfragen ruf mich gerne an!",
+    "form": {
+      "titleMessage": "Schick mir eine Nachricht",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "yourName": "Dein Name",
+      "yourEmail": "deine@email.de",
+      "subjectMessage": "Worum geht’s?",
+      "project": "Erzähl mir mehr über dein Projekt...",
+      "sendMessage": "Nachricht senden",
+      "messageSuccess": "Nachricht gesendet!",
+      "messageSuccessText": "Vielen Dank für deine Nachricht. Ich melde mich bald bei dir.",
+      "sendAnotherMessage": "Noch eine Nachricht senden?"
+    }
+  }
+}

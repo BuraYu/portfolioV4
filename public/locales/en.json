@@ -1,0 +1,64 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Fullstack Developer",
+    "text": "Text",
+    "button": {
+      "connect": "Let's connect",
+      "work": "View my work"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "par1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "par2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "par3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "badge1": "Coding",
+    "badge2": "Swimming",
+    "badge3": "Pets",
+    "connect": "Let's Connect",
+    "mainTitle": "Title image",
+    "subTitle": "Subtitle image"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subTitle": "Here are you may find some of my recents projects.",
+    "technology": "Technologies Used",
+    "projectOneDescription": "A web application built with Next.js and MongoDB that allows users to explore events, filter them by categories (such as Music, Sports, Technology, etc.), and view event details.",
+    "projectTwoDescription": "A modern website for a packaging company, showcasing products, and contact information. Built with Next.js and styled using Tailwind CSS for a responsive and user-friendly experience.",
+    "projectThreeDescription": "A bento grid with a chat and terminal, to showcase project that have been done.",
+    "viewMore": "View More on GitHub"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "mainParagraph": "Ready to start your next project? Let's create something amazing together!",
+    "subTitle": "Let's connect",
+    "subParagraph": "I'm always open to discussing new opportunities, creative projects, or just having a chat about technology and design.",
+    "phone": "Phone",
+    "response": "Response Time",
+    "responseParagraph": "I typically respond to emails within 24 hours. For urgent inquiries, feel free to call!",
+    "form": {
+      "titleMessage": "Send me a message",
+      "name": "Full Name",
+      "email": "Email Adresse",
+      "subject": "Subject",
+      "message": "Message",
+      "yourName": "Your Name",
+      "yourEmail": "your@email.com",
+      "subjectMessage": "What's this about",
+      "project": "Tell me about the project...",
+      "sendMessage": "Send Message",
+      "messageSuccess": "Message Sent!",
+      "messageSuccessText": "Thank you for reaching out. I'll get back to you soon.",
+      "sendAnotherMessage": "Want to send another message?"
+    }
+  }
+}

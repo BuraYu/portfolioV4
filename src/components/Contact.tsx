@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 const Contact: React.FunctionComponent<{}> = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,9 +48,8 @@ const Contact: React.FunctionComponent<{}> = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
-      console.log("Email successfully sent!", result.status, result.text);
       setIsSubmitted(true);
-      localStorage.setItem("emailSent", "true"); 
+      localStorage.setItem("emailSent", "true");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("Email send failed:", error);
@@ -55,7 +57,6 @@ const Contact: React.FunctionComponent<{}> = () => {
     }
 
     setIsLoading(false);
-
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
@@ -68,7 +69,7 @@ const Contact: React.FunctionComponent<{}> = () => {
     },
     {
       icon: Phone,
-      label: "Phone",
+      label: t("contact.phone"),
       value: "+49 (163) 88 71 88 1",
       href: "tel:+491638871881",
     },
@@ -90,13 +91,12 @@ const Contact: React.FunctionComponent<{}> = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                Get In Touch
+                {t("contact.title")}
               </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Ready to start your next project? Let's create something amazing
-              together!
+              {t("contact.mainParagraph")}
             </p>
           </div>
 
@@ -105,11 +105,10 @@ const Contact: React.FunctionComponent<{}> = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">
-                  Let's Connect
+                  {t("contact.subTitle")}
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  I'm always open to discussing new opportunities, creative
-                  projects, or just having a chat about technology and design.
+                  {t("contact.subParagraph")}
                 </p>
               </div>
 
@@ -135,14 +134,12 @@ const Contact: React.FunctionComponent<{}> = () => {
                 ))}
               </div>
 
-              {/* Additional Info */}
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-3">
-                  Response Time
+                  {t("contact.response")}
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I typically respond to emails within 24 hours. For urgent
-                  inquiries, feel free to call!
+                  {t("contact.responseParagraph")}
                 </p>
               </div>
             </div>
@@ -153,10 +150,10 @@ const Contact: React.FunctionComponent<{}> = () => {
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
-                    Message Sent!
+                    {t("contact.form.messageSuccess")}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Thank you for reaching out. I'll get back to you soon.
+                    {t("contact.form.messageSuccessText")}
                   </p>
                   <button
                     onClick={() => {
@@ -165,13 +162,13 @@ const Contact: React.FunctionComponent<{}> = () => {
                     }}
                     className="mt-4 text-sm text-blue-600 hover:underline"
                   >
-                    Want to send another message?
+                    {t("contact.form.sendAnotherMessage")}
                   </button>
                 </div>
               ) : (
                 <>
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">
-                    Send me a message
+                    {t("contact.form.titleMessage")}
                   </h3>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
@@ -180,7 +177,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                           htmlFor="name"
                           className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                         >
-                          Full Name
+                          {t("contact.form.name")}
                         </label>
                         <input
                           type="text"
@@ -190,7 +187,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
-                          placeholder="Your name"
+                          placeholder={t("contact.form.yourName")}
                         />
                       </div>
                       <div>
@@ -198,7 +195,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                           htmlFor="email"
                           className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                         >
-                          Email Address
+                          {t("contact.form.email")}
                         </label>
                         <input
                           type="email"
@@ -208,7 +205,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
-                          placeholder="your@email.com"
+                          placeholder={t("contact.form.yourEmail")}
                         />
                       </div>
                     </div>
@@ -218,7 +215,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                         htmlFor="subject"
                         className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                       >
-                        Subject
+                        {t("contact.form.subject")}
                       </label>
                       <input
                         type="text"
@@ -228,7 +225,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
-                        placeholder="What's this about?"
+                        placeholder={t("contact.form.subjectMessage")}
                       />
                     </div>
 
@@ -237,7 +234,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                         htmlFor="message"
                         className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                       >
-                        Message
+                        {t("contact.form.message")}
                       </label>
                       <textarea
                         id="message"
@@ -247,7 +244,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                         required
                         rows={5}
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200 resize-none"
-                        placeholder="Tell me about your project..."
+                        placeholder={t("contact.form.project")}
                       ></textarea>
                     </div>
 
@@ -261,7 +258,7 @@ const Contact: React.FunctionComponent<{}> = () => {
                       ) : (
                         <>
                           <Send className="w-5 h-5 mr-2" />
-                          Send Message
+                          {t("contact.form.sendMessage")}
                         </>
                       )}
                     </button>

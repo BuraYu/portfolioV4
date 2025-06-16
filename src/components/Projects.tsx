@@ -1,14 +1,16 @@
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import BackgroundVideo from "./ui/BackgroundVideo";
+import { useTranslation } from "react-i18next";
 
 const Projects: React.FunctionComponent<{}> = () => {
+  const { t } = useTranslation();
+
   const projects = [
     {
       id: 1,
       title: "Flokkr",
-      description:
-        "A web application built with Next.js and MongoDB that allows users to explore events, filter them by categories (such as Music, Sports, Technology, etc.), and view event details.",
+      description: t("projects.projectOneDescription"),
       image: "/flokkr.mp4",
       tech: [
         "React/NextJS",
@@ -24,8 +26,7 @@ const Projects: React.FunctionComponent<{}> = () => {
     {
       id: 2,
       title: "Shalia",
-      description:
-        "A modern website for a packaging company, showcasing products, and contact information. Built with Next.js and styled using Tailwind CSS for a responsive and user-friendly experience.",
+      description: t("projects.projectTwoDescription"),
       image: "/shalia.mp4",
       tech: ["React/NextJS", "Tailwind CSS"],
       github: "https://github.com/BuraYu/shaila",
@@ -35,8 +36,7 @@ const Projects: React.FunctionComponent<{}> = () => {
     {
       id: 3,
       title: "Bento",
-      description:
-        "A bento grid with a chat and terminal, to showcase project that have been done.",
+      description: t("projects.projectThreeDescription"),
       image: "/BentoGrid.mp4",
       tech: ["NextJS", "MongoDB", "Framer Motion", "Slick"],
       github: "https://github.com/BuraYu/portfolioV3",
@@ -52,13 +52,12 @@ const Projects: React.FunctionComponent<{}> = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                Featured Projects
+                {t("projects.title")}
               </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Here are some of my recent projects that showcase my skills and
-              passion for frontend development
+              {t("projects.subTitle")}
             </p>
           </div>
 
@@ -121,7 +120,7 @@ const Projects: React.FunctionComponent<{}> = () => {
                   {/* Tech Stack */}
                   <div>
                     <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
-                      Technologies Used
+                      {t("projects.technology")}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (

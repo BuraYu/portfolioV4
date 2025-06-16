@@ -3,8 +3,11 @@ import { Panda, Fish, Bug } from "lucide-react";
 import Badge from "./Badge";
 import GradientDivider from "./ui/GradientDivider";
 import GradientButton from "./ui/GradientButton";
+import { useTranslation } from "react-i18next";
 
 const About: React.FunctionComponent<{}> = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +15,7 @@ const About: React.FunctionComponent<{}> = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                About Me
+                {t("about.title")}
               </span>
             </h2>
             <GradientDivider />
@@ -21,28 +24,16 @@ const About: React.FunctionComponent<{}> = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="prose prose-lg text-gray-600 dark:text-gray-300">
-                <p className="text-xl leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  voluptatem iusto reprehenderit iste modi in nihil culpa sed!
-                  Facere, quisquam?
-                </p>
+                <p className="text-xl leading-relaxed">{t("about.par1")}</p>
 
-                <p className="text-lg leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                  nam ducimus quisquam libero ex delectus voluptate ullam
-                  veritatis quae aliquam.
-                </p>
+                <p className="text-lg leading-relaxed">{t("about.par2")}</p>
 
-                <p className="text-lg leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                  ipsum veritatis voluptate. Temporibus, tempore exercitationem
-                  sit architecto nemo consectetur optio.
-                </p>
+                <p className="text-lg leading-relaxed">{t("about.par3")}</p>
               </div>
               <div className="flex flex-wrap gap-4 pt-6">
-                <Badge icon={Bug} label="Coding" theme="blue" />
-                <Badge icon={Fish} label="Coding" theme="cyan" />
-                <Badge icon={Panda} label="Coding" theme="teal" />
+                <Badge icon={Bug} label={t("about.badge1")} theme="blue" />
+                <Badge icon={Fish} label={t("about.badge2")} theme="cyan" />
+                <Badge icon={Panda} label={t("about.badge3")} theme="teal" />
               </div>
 
               <div className="pt-8">
@@ -53,7 +44,7 @@ const About: React.FunctionComponent<{}> = () => {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Let's Connect
+                  {t("about.connect")}
                   <svg
                     className="ml-2 w-5 h-5"
                     fill="none"
@@ -81,9 +72,11 @@ const About: React.FunctionComponent<{}> = () => {
                   />
                   <div className="text-center">
                     <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                      Title
+                      {t("about.mainTitle")}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400">Subtitle</p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {t("about.subTitle")}
+                    </p>
                   </div>
                 </div>
               </div>
