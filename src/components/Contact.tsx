@@ -50,6 +50,7 @@ const Contact: React.FunctionComponent<{}> = () => {
 
       setIsSubmitted(true);
       localStorage.setItem("emailSent", "true");
+      console.log("Email sent successfully:", result); 
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("Email send failed:", error);
