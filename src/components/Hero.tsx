@@ -59,16 +59,16 @@ const Hero = () => {
             <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light text-gray-700 dark:text-gray-300 mb-6">
               Burak Yüksel
             </h2>
-            {/* TODO add location */}
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
               {t("hero.text")}
             </p>
           </div>
 
           {/* Social Links */}
+          {/* TODO deprecated icons, replace */}
           <div className="flex justify-center space-x-6 mb-12">
             <a
-              href="https://github.com"
+              href="https://github.com/burayu"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
@@ -76,7 +76,7 @@ const Hero = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/burakyüksel-/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400"
@@ -84,7 +84,7 @@ const Hero = () => {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:burak.yueksel@hotmail.com"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
             >
               <Mail size={24} />
