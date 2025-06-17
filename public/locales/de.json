@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Fullstack-Entwickler",
-    "text": "Text",
+    "text": "Aus Berlin – verfügbar für neue Projekte.",
     "button": {
       "connect": "Kontakt",
       "work": "Ausgewählte Projekte"
@@ -18,12 +18,12 @@
   },
   "about": {
     "title": "Über mich",
-    "par1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
-    "par2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
-    "par3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "par1": "Ich bin Fullstack-Webentwickler mit Fokus auf moderne Webanwendungen. Mit Technologien wie React, Next.js, Node.js und MongoDB entwickle ich skalierbare Lösungen – vom Frontend bis zur Backend-Architektur.",
+    "par2": "Ich arbeite gerne an Projekten, bei denen Design und Funktion Hand in Hand gehen – egal ob es um einfache Seiten oder komplexere Anwendungen geht. Besonders gerne nutze ich React, Next.js und Node.js, aber ich bin immer offen, Neues zu lernen.",
+    "par3": "Aktuell bin ich offen für spannende Projekte – remote oder vor Ort. Ich freue mich darauf, deine Ideen in hochwertige Anwendungen zu verwandeln.",
     "badge1": "Programmieren",
     "badge2": "Schwimmen",
-    "badge3": "Haustiere",
+    "badge3": "Lesen",
     "connect": "Kontakt",
     "mainTitle": "Titelbild",
     "subTitle": "Untertitelbild"
@@ -39,7 +39,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "mainParagraph": "Bereit für dein nächstes Projekt? Lass uns gemeinsam etwas Großartiges erschaffen!",
+    "mainParagraph": "Bereit? Ich bin es. Lass uns loslegen!",
     "subTitle": "Lass uns in Kontakt treten",
     "subParagraph": "Ich bin immer offen für neue Möglichkeiten, kreative Projekte oder einfach ein Gespräch über Technologie und Design.",
     "phone": "Telefon",
@@ -54,7 +54,7 @@
       "yourName": "Dein Name",
       "yourEmail": "deine@email.de",
       "subjectMessage": "Worum geht’s?",
-      "project": "Erzähl mir mehr über dein Projekt...",
+      "project": "Erzähl mir mehr über...",
       "sendMessage": "Nachricht senden",
       "messageSuccess": "Nachricht gesendet!",
       "messageSuccessText": "Vielen Dank für deine Nachricht. Ich melde mich bald bei dir.",

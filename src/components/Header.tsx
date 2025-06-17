@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const Header: React.FunctionComponent<{}> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [language, setLanguage] = useState("EN");
+  const [language, setLanguage] = useState("DE");
   const { isDarkMode, toggleDarkMode } = useTheme();
 
   const { t, i18n } = useTranslation();

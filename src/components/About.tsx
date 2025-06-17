@@ -1,5 +1,5 @@
 import React from "react";
-import { Panda, Fish, Bug } from "lucide-react";
+import { Bug, Fish, Book } from "lucide-react";
 import Badge from "./Badge";
 import GradientDivider from "./ui/GradientDivider";
 import GradientButton from "./ui/GradientButton";
@@ -33,7 +33,7 @@ const About: React.FunctionComponent<{}> = () => {
               <div className="flex flex-wrap gap-4 pt-6">
                 <Badge icon={Bug} label={t("about.badge1")} theme="blue" />
                 <Badge icon={Fish} label={t("about.badge2")} theme="cyan" />
-                <Badge icon={Panda} label={t("about.badge3")} theme="teal" />
+                <Badge icon={Book} label={t("about.badge3")} theme="teal" />
               </div>
 
               <div className="pt-8">

@@ -47,7 +47,7 @@ const Contact: React.FunctionComponent<{}> = () => {
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-
+    
       setIsSubmitted(true);
       localStorage.setItem("emailSent", "true");
       console.log("Email sent successfully:", result); 
@@ -58,7 +58,6 @@ const Contact: React.FunctionComponent<{}> = () => {
     }
 
     setIsLoading(false);
-    setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   const contactInfo = [

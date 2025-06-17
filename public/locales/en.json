@@ -10,23 +10,23 @@
   },
   "hero": {
     "title": "Fullstack Developer",
-    "text": "Text",
+    "text": "Based in Berlin",
     "button": {
       "connect": "Let's connect",
       "work": "View my work"
     }
   },
   "about": {
-    "title": "About me",
-    "par1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
-    "par2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
-    "par3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatem iusto reprehenderit iste modi in nihil culpa sed! Facere, quisquam?",
+    "title": "About Me",
+    "par1": "I’m a fullstack web developer focused on modern web applications. Using technologies like React, Next.js, Node.js, and MongoDB, I build scalable solutions – from the frontend to the backend architecture.",
+    "par2": "I enjoy working on projects where design and functionality go hand in hand – whether it’s simple websites or more complex applications. I especially enjoy using React, Next.js, and Node.js, but I’m always open to learning new things.",
+    "par3": "I'm currently open to exciting new projects – remote or on-site. I look forward to turning your ideas into high-quality applications.",
     "badge1": "Coding",
     "badge2": "Swimming",
-    "badge3": "Pets",
-    "connect": "Let's Connect",
-    "mainTitle": "Title image",
-    "subTitle": "Subtitle image"
+    "badge3": "Reading",
+    "connect": "Contact",
+    "mainTitle": "Main Image",
+    "subTitle": "Subtitle Image"
   },
   "projects": {
     "title": "Featured Projects",

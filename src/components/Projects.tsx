@@ -169,7 +169,7 @@ const Projects: React.FunctionComponent<{}> = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               <Github size={20} className="mr-2" />
-              View More on GitHub
+              {t("projects.viewMore")}
             </a>
           </div>
         </div>
