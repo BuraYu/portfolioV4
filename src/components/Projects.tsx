@@ -76,6 +76,7 @@ const Projects: React.FunctionComponent<{}> = () => {
                   }`}
                 >
                   <div className="relative overflow-hidden rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300">
+                    {/* TODO remove scale. Fullscreen?  */}
                     <BackgroundVideo
                       src={project.image}
                       className="w-full h-64 sm:h-80 object-fit transform group-hover:scale-105 transition-transform duration-500"

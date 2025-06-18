@@ -60,5 +60,15 @@
       "messageSuccessText": "Vielen Dank für deine Nachricht. Ich melde mich bald bei dir.",
       "sendAnotherMessage": "Noch eine Nachricht senden?"
     }
+  },
+  "footer": {
+    "description": "Zusammen entwickeln wir etwas, das Eindruck hinterlässt.",
+    "links": "Links",
+    "home": "Home",
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "touch": "Kontaktinfo"
   }
 }

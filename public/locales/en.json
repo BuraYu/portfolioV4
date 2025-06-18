@@ -60,5 +60,15 @@
       "messageSuccessText": "Thank you for reaching out. I'll get back to you soon.",
       "sendAnotherMessage": "Want to send another message?"
     }
+  },
+  "footer": {
+    "description": "Let's build something amazing together.",
+    "links": "Links",
+    "hone": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "touch": "Get In Touch"
   }
 }

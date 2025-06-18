@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, Globe, Moon, Sun } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
+import LogoName from "./ui/LogoName";
 
 const Header: React.FunctionComponent<{}> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,14 +54,7 @@ const Header: React.FunctionComponent<{}> = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">BY</span>
-            </div>
-            <span className="ml-3 text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              Burak Yüksel
-            </span>
-          </div>
+          <LogoName />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
