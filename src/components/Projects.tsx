@@ -1,7 +1,8 @@
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import BackgroundVideo from "./ui/BackgroundVideo";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Projects: React.FunctionComponent<{}> = () => {
   const { t } = useTranslation();
@@ -162,7 +163,7 @@ const Projects: React.FunctionComponent<{}> = () => {
           </div>
 
           {/* View More Projects */}
-          <div className="text-center mt-16">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-16">
             <a
               href="https://github.com"
               target="_blank"
@@ -172,6 +173,13 @@ const Projects: React.FunctionComponent<{}> = () => {
               <Github size={20} className="mr-2" />
               {t("projects.viewMore")}
             </a>
+            <Link
+              to="/projects"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
+              Browse Other Projects
+              <ArrowRight size={20} className="ml-2" />
+            </Link>
           </div>
         </div>
       </div>
