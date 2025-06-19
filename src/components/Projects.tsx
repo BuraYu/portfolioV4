@@ -173,13 +173,13 @@ const Projects: React.FunctionComponent<{}> = () => {
               <Github size={20} className="mr-2" />
               {t("projects.viewMore")}
             </a>
-            <Link
+            {/* <Link
               to="/projects"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Browse Other Projects
               <ArrowRight size={20} className="ml-2" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
