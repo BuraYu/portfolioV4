@@ -66,18 +66,10 @@ const About: React.FunctionComponent<{}> = () => {
               <div className="relative z-10 bg-gradient-to-br from-blue-100 to-teal-100 dark:from-blue-900/30 dark:to-teal-900/30 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
                   <img
-                    src="https://picsum.photos/400/700"
+                    src="./public/self.PNG"
                     alt="Developer workspace"
-                    className="w-full h-64 object-cover rounded-lg mb-4"
+                    className="w-full h-74 object-cover rounded-lg mb-4"
                   />
-                  <div className="text-center">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                      {t("about.mainTitle")}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {t("about.subTitle")}
-                    </p>
-                  </div>
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-teal-200 dark:from-blue-800/30 dark:to-teal-800/30 rounded-2xl transform -rotate-3"></div>

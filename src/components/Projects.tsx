@@ -1,8 +1,9 @@
 import React from "react";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import {  ExternalLink, Github } from "lucide-react";
+// import {  ArrowRight } from "lucide-react";
 import BackgroundVideo from "./ui/BackgroundVideo";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Projects: React.FunctionComponent<{}> = () => {
   const { t } = useTranslation();
