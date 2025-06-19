@@ -66,8 +66,8 @@ const About: React.FunctionComponent<{}> = () => {
               <div className="relative z-10 bg-gradient-to-br from-blue-100 to-teal-100 dark:from-blue-900/30 dark:to-teal-900/30 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
                   <img
-                    src="./public/self.PNG"
-                    alt="Developer workspace"
+                    src="/self.PNG"
+                    alt="Self image"
                     className="w-full h-74 object-cover rounded-lg mb-4"
                   />
                 </div>
