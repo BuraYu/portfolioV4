@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          {/* TODO deprecated icons, replace */}
+          {/* TODO deprecated icons replace */}
           <div className="flex justify-center space-x-6 mb-12">
             <a
               href="https://github.com/burayu"
