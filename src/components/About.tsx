@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Bug, Fish, Book } from "lucide-react";
 import Badge from "./Badge";
 import GradientDivider from "./ui/GradientDivider";
 import GradientButton from "./ui/GradientButton";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About: React.FunctionComponent<{}> = () => {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        className="container mx-auto px-4 sm:px-6 lg:px-8"
+        data-aos="fade-up"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -21,7 +33,10 @@ const About: React.FunctionComponent<{}> = () => {
             <GradientDivider />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div
+            className="grid lg:grid-cols-2 gap-12 items-center"
+            data-aos="fade-right"
+          >
             <div className="space-y-6">
               <div className="prose prose-lg text-gray-600 dark:text-gray-300">
                 <p className="text-xl leading-relaxed">{t("about.par1")}</p>
@@ -63,7 +78,10 @@ const About: React.FunctionComponent<{}> = () => {
             </div>
 
             <div className="relative">
-              <div className="relative z-10 bg-gradient-to-br from-blue-100 to-teal-100 dark:from-blue-900/30 dark:to-teal-900/30 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+              <div
+                className="relative z-10 bg-gradient-to-br from-blue-100 to-teal-100 dark:from-blue-900/30 dark:to-teal-900/30 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300"
+                data-aos="fade-right"
+              >
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
                   <img
                     src="/self.PNG"

@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import LogoName from "./ui/LogoName";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Footer: React.FunctionComponent<{}> = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/burayu", label: "GitHub" },
@@ -22,7 +31,10 @@ const Footer: React.FunctionComponent<{}> = () => {
   };
 
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12">
+    <footer
+      className="bg-gray-900 dark:bg-gray-950 text-white py-12"
+      data-aos="fade-up"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">

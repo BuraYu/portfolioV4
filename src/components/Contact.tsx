@@ -2,9 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact: React.FunctionComponent<{}> = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -47,10 +56,10 @@ const Contact: React.FunctionComponent<{}> = () => {
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-    
+
       setIsSubmitted(true);
       localStorage.setItem("emailSent", "true");
-      console.log("Email sent successfully:", result); 
+      console.log("Email sent successfully:", result);
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("Email send failed:", error);
@@ -102,7 +111,7 @@ const Contact: React.FunctionComponent<{}> = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8" data-aos="fade-right">
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">
                   {t("contact.subTitle")}
@@ -145,7 +154,10 @@ const Contact: React.FunctionComponent<{}> = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+            <div
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+              data-aos="fade-left"
+            >
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />

@@ -1,12 +1,21 @@
-import React from "react";
-import {  ExternalLink, Github } from "lucide-react";
+import React, { useEffect } from "react";
+import { ExternalLink, Github } from "lucide-react";
 // import {  ArrowRight } from "lucide-react";
 import BackgroundVideo from "./ui/BackgroundVideo";
 import { useTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Projects: React.FunctionComponent<{}> = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   const projects = [
     {
@@ -67,6 +76,7 @@ const Projects: React.FunctionComponent<{}> = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
+                data-aos={`${project.reverse ? "fade-right" : "fade-left"}`}
                 className={`grid lg:grid-cols-2 gap-12 items-center ${
                   project.reverse ? "lg:grid-flow-col-dense" : ""
                 }`}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SiJavascript,
   SiTypescript,
@@ -13,6 +13,8 @@ import {
 } from "react-icons/si";
 import { useTheme } from "../contexts/ThemeContext";
 import GradientDivider from "./ui/GradientDivider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const techStacks = {
   frontend: [
@@ -42,6 +44,13 @@ const techStacks = {
 const Skills: React.FunctionComponent<{}> = () => {
   const { isDarkMode } = useTheme();
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <section
       id="skills"
@@ -68,7 +77,10 @@ const Skills: React.FunctionComponent<{}> = () => {
               {section}
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-3 md:w-[650px]">
+            <div
+              className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-3 md:w-[650px]"
+              data-aos="fade-right"
+            >
               {skills.map(({ icon, label, color }, i) => (
                 <div
                   key={i}
