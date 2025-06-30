@@ -34,7 +34,7 @@ const About: React.FunctionComponent<{}> = () => {
           </div>
 
           <div
-            className="grid lg:grid-cols-2 gap-12 items-center"
+            className="grid lg:grid-cols-1 gap-12 items-center"
             data-aos="fade-right"
           >
             <div className="space-y-6">
@@ -77,7 +77,7 @@ const About: React.FunctionComponent<{}> = () => {
               </div>
             </div>
 
-            <div className="relative">
+            {/* <div className="relative">
               <div
                 className="relative z-10 bg-gradient-to-br from-blue-100 to-teal-100 dark:from-blue-900/30 dark:to-teal-900/30 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300"
                 data-aos="fade-right"
@@ -91,7 +91,7 @@ const About: React.FunctionComponent<{}> = () => {
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-teal-200 dark:from-blue-800/30 dark:to-teal-800/30 rounded-2xl transform -rotate-3"></div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
