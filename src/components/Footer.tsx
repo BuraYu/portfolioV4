@@ -51,27 +51,30 @@ const Footer: React.FunctionComponent<{}> = () => {
               <h3 className="text-lg font-semibold">{t("footer.links")}</h3>
               <div className="space-y-2">
                 {[
-                  t("footer.home"),
-                  t("footer.about"),
-                  t("footer.skills"),
-                  t("footer.projects"),
-                  t("footer.contact"),
-                ].map((item) => (
-                  <button
-                    key={item}
-                    onClick={() => {
-                      const element = document.getElementById(
-                        item.toLowerCase()
-                      );
-                      if (element) {
-                        element.scrollIntoView({ behavior: "smooth" });
-                      }
-                    }}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    {item}
-                  </button>
-                ))}
+                  "footer.hero",
+                  "footer.about",
+                  "footer.skills",
+                  "footer.projects",
+                  "footer.contact",
+                ].map((key) => {
+                  const label = t(key); 
+                  const sectionId = key.split(".")[1]; 
+
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => {
+                        const element = document.getElementById(sectionId);
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      className="block text-gray-400 hover:text-white transition-colors duration-200"
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
