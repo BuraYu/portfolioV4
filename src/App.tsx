@@ -1,10 +1,6 @@
 import "./App.css";
 
-type HazardStripeProps = {
-  position: "top" | "bottom";
-};
-
-function HazardStripe({ position }: HazardStripeProps) {
+function HazardStripe() {
   return (
     <div
       className={`w-full h-20 flex-shrink-0
@@ -17,7 +13,7 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-[100svh] w-full bg-yellow-400">
       {/* Top Stripe */}
-      <HazardStripe position="top" />
+      <HazardStripe />
 
       {/* Content Area */}
       <div className="flex-1 relative">
@@ -45,7 +41,7 @@ export default function App() {
       </div>
 
       {/* Bottom Stripe */}
-      <HazardStripe position="bottom" />
+      <HazardStripe />
     </div>
   );
 }
